@@ -177,7 +177,7 @@ def page_architecture():
         ("Question", "User types a question in the chat input."),
         ("Retrieve",  "FAISS returns top-4 chunks closest to the question vector."),
         ("Prompt",    "Chunks joined as context and inserted into a ChatPromptTemplate."),
-        ("Groq LLM",  "LLaMA / GPT-OSS on Groq Cloud generates the grounded answer."),
+        ("Groq LLM",  "GPT-OSS on Groq Cloud generates the grounded answer."),
         ("Reply",     "Answer shown in chat. Source chunks in the expander below the reply."),
     ]
     for col, (title, desc) in zip(q_cols[::2], query):
@@ -245,8 +245,6 @@ def page_architecture():
             "Provider    : Groq Cloud API\n"
             "Auth        : user API key (never stored)\n"
             "Models      :\n"
-            "  llama-3.3-70b-versatile\n"
-            "  llama-3.1-8b-instant\n"
             "  openai/gpt-oss-120b\n"
             "  openai/gpt-oss-20b\n"
             "Temperature : 0.2\n"
@@ -401,8 +399,6 @@ def main():
         model_name = st.selectbox(
             "model",
             options=[
-                "llama-3.3-70b-versatile",
-                "llama-3.1-8b-instant",
                 "openai/gpt-oss-120b",
                 "openai/gpt-oss-20b",
             ],
