@@ -16,6 +16,7 @@ huggingface-hub>=0.24.0
 # PyTorch CPU-only (smaller image on Streamlit Cloud)
 --extra-index-url https://download.pytorch.org/whl/cpu
 torch>=2.3.0
+torchvision>=0.18.0
 
 # Document loaders
 pypdf>=4.2.0
